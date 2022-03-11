@@ -6,17 +6,17 @@ const Photo = (props) => {
   console.log(props);
   // Le props récupéré vient de App.js qui hérite de HomeStackNav.js
 
-  const RetourEnArriere = () => {  
-    props.navigation.goBack();
+  const RetourALaPremiereStack = () => {  
+    props.navigation.popToTop();
   }
-  // Bouton pour revenir en arrière
+  // Bouton pour revenir à la 1ère stack
 
   return (
     <View style={styles.container}>
       <Text style={styles.textScreen}>Photo</Text>
       <Button
-      title='Retour en arrière'
-      onPress={RetourEnArriere}
+      title='Retour à la première stack avec popToTop'
+      onPress={RetourALaPremiereStack}
       />
     </View>
   )

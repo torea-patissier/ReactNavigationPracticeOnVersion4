@@ -7,10 +7,8 @@ const Portfolio = ({navigation}) => {
 
     const GoToPhoto = () => {
 
-        navigation.replace('Photo')
-        // Le replace ici permet d'aller au stack suivant et supprimer le stack actuel de la pile
-        // Si Home > Portfolio (avec replace) > Photo (Goback)
-        // Alors Home > Photo (Goback)
+        navigation.navigate('Photo')
+
     }
 
   return (

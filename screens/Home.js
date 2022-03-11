@@ -17,7 +17,7 @@ const Home = ({navigation}) => {
     <View style={styles.container}>
       <Text style={styles.textScreen}>Home</Text>
       <Button
-          title="Go to Portfolio"
+          title="Navigate to Portfolio"
           onPress={move}
         />
     </View>

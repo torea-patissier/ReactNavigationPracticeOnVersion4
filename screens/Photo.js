@@ -15,7 +15,7 @@ const Photo = (props) => {
     <View style={styles.container}>
       <Text style={styles.textScreen}>Photo</Text>
       <Button
-      title='Retour à n stack en arrière avec pop'
+      title='Retour à n(2) stack en arrière avec pop'
       onPress={popAvecParam}
       />
     </View>

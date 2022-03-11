@@ -15,7 +15,7 @@ const Portfolio = ({navigation}) => {
     <View style={styles.container}>
       <Text style={styles.textScreen}>Portfolio</Text>
       <Button
-      title='Replace vers photos'
+      title='Navigate vers photos'
       onPress={GoToPhoto}
 
       />

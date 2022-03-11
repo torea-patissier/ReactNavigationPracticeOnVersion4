@@ -15,7 +15,7 @@ const Home = ({navigation}) => {
 
   return (
     <View style={styles.container}>
-      <Text>Home</Text>
+      <Text style={styles.textScreen}>Home</Text>
       <Button
           title="Go to Portfolio"
           onPress={move}
@@ -32,6 +32,8 @@ const styles = StyleSheet.create({
         alignItems:'center',
         backgroundColor:'lightblue',
         flex:1,
-
-    }
+    },
+    textScreen: {
+      fontSize:50,
+    },
 }) 

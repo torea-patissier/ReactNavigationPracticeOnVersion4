@@ -13,7 +13,7 @@ const Photo = (props) => {
 
   return (
     <View style={styles.container}>
-      <Text>Photo</Text>
+      <Text style={styles.textScreen}>Photo</Text>
       <Button
       title='Retour en arrière'
       onPress={RetourEnArriere}
@@ -28,8 +28,10 @@ const styles = StyleSheet.create({
     container:{
         justifyContent:'center',
         alignItems:'center',
-        backgroundColor:'red',
+        backgroundColor:'lightpink',
         flex:1,
-
-    }
+    },
+    textScreen: {
+      fontSize:50,
+    },
 })

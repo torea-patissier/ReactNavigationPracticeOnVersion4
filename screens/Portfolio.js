@@ -7,14 +7,17 @@ const Portfolio = ({navigation}) => {
 
     const GoToPhoto = () => {
 
-        navigation.navigate('Photo')
+        navigation.replace('Photo')
+        // Le replace ici permet d'aller au stack suivant et supprimer le stack actuel de la pile
+        // Si Home > Portfolio (avec replace) > Photo (Goback)
+        // Alors Home > Photo (Goback)
     }
 
   return (
     <View style={styles.container}>
-      <Text>Portfolio</Text>
+      <Text style={styles.textScreen}>Portfolio</Text>
       <Button
-      title='Aller vers photos'
+      title='Replace vers photos'
       onPress={GoToPhoto}
 
       />
@@ -28,7 +31,10 @@ const styles = StyleSheet.create({
     container:{
         justifyContent:'center',
         alignItems:'center',
-        backgroundColor:'green',
+        backgroundColor:'lightgreen',
         flex:1,
-    }
+    },
+    textScreen: {
+      fontSize:50,
+    },
 })

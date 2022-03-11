@@ -1,9 +1,21 @@
 import { StyleSheet, Text, View, Button } from 'react-native'
-import React from 'react'
+import React, {useEffect} from 'react'
 
 const Portfolio = ({navigation}) => {
 
     // console.log(props)
+
+    useEffect(() => {
+
+      console.log('Portfolio est monté');
+      
+        return () => {
+
+          console.log('Portfolio est démonté');
+          
+        }
+    })
+    
 
     const GoToPhoto = () => {
 

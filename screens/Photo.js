@@ -1,22 +1,36 @@
 import { StyleSheet, Text, View, Button } from 'react-native'
-import React from 'react'
+import React, {useEffect} from 'react'
 
 const Photo = (props) => {
 
-  console.log(props);
+  // console.log(props);
   // Le props récupéré vient de App.js qui hérite de HomeStackNav.js
 
-  const popAvecParam = () => {  
-    props.navigation.pop(2);
+  const LancerPopToTop = () => {  
+    props.navigation.popToTop();
   }
+
+  useEffect(() => {
+
+    console.log('Photo est monté');
+
+      return () => {
+
+        console.log('Photo est démonté');
+        
+      }
+  })
+  
+
+  
   // Avec pop je retourne (2) stack en arrière donc à Home car Home > Portfolio > Photo
 
   return (
     <View style={styles.container}>
       <Text style={styles.textScreen}>Photo</Text>
       <Button
-      title='Retour à n(2) stack en arrière avec pop'
-      onPress={popAvecParam}
+      title='PopTopTop'
+      onPress={LancerPopToTop}
       />
     </View>
   )

@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View, Button } from 'react-native'
-import React from 'react'
+import React, {useEffect} from 'react'
 
 const Home = ({navigation}) => {
     /**
@@ -8,6 +8,18 @@ const Home = ({navigation}) => {
      */
 
     // console.log(props); 
+
+    useEffect(() => {
+      
+      console.log('Home est monté');
+
+        return () => {
+
+          console.log('Home est démonté');
+          
+        }
+    })
+    
 
     const move = () => {
         navigation.navigate('Portfolio')

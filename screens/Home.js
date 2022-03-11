@@ -1,10 +1,25 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, Button } from 'react-native'
 import React from 'react'
 
-const Home = () => {
+const Home = ({navigation}) => {
+    /**
+     * navigation est un objet du props envoyé par Apps.js
+     * Ce props est récupéré de StackNav dans HomeStack
+     */
+
+    // console.log(props); 
+
+    const move = () => {
+        navigation.navigate('Portfolio')
+    }
+
   return (
     <View style={styles.container}>
       <Text>Home</Text>
+      <Button
+          title="Go to Portfolio"
+          onPress={move}
+        />
     </View>
   )
 }
@@ -15,7 +30,7 @@ const styles = StyleSheet.create({
     container:{
         justifyContent:'center',
         alignItems:'center',
-        backgroundColor:'blue',
+        backgroundColor:'lightblue',
         flex:1,
 
     }

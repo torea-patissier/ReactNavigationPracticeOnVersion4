@@ -16,7 +16,8 @@ const screens =  {
     screen : Photo
     },
 
-    Portfolio:{
+    Portfolio:
+    {
     screen : Portfolio
     },
 

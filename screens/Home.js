@@ -1,9 +1,9 @@
-import { View, Image, FlatList, Text } from 'react-native'
+import { View, Image, FlatList, Text, Pressable } from 'react-native'
 import React, {useEffect} from 'react'
 import { globalStyle } from '../styles/AppStyles';
 //Global style est le fichier CSS passé depuis AppStyles
 
-const Home = () => {
+const Home = ({navigation}) => {
     /**
      * navigation est un objet du props envoyé par Apps.js
      * Ce props est récupéré de StackNav dans HomeStack
@@ -52,7 +52,13 @@ const Home = () => {
      * item me permet d'accéder aux différentes propriétés des items du tableau DATA
      */
     return(
-      <View style={globalStyle.container}>
+      <Pressable
+      style={globalStyle.container}
+      onPress={()=> navigation.navigate('Portfolio',item)}
+      /**
+       * J'envoie les informations de item en paramètre à la page Portfolio
+       */
+      >
         <Text style={globalStyle.titleText}>{item.name} | {item.country}</Text>
         <Image
         source = {{ uri: item.img }}
@@ -61,7 +67,7 @@ const Home = () => {
         <View>
           <Text style={globalStyle.descHome}>{item.desc}</Text>
         </View>
-      </View>
+      </Pressable>
     )
   }
 

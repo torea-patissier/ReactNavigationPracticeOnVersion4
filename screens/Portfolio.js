@@ -3,8 +3,6 @@ import React, {useEffect} from 'react'
 
 const Portfolio = ({navigation}) => {
 
-    // console.log(props)
-
     useEffect(() => {
 
       console.log('Portfolio est monté');
@@ -25,7 +23,11 @@ const Portfolio = ({navigation}) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.textScreen}>Portfolio</Text>
+      <Text style={styles.textScreen}>{navigation.getParam('name')}</Text>
+      {/* 
+      navigation est un objet qui contient la methode js getParam
+      on récupère le param name du tableau DATA dans Home.js
+      */}
       <Button
       title='Navigate vers photos'
       onPress={GoToPhoto}

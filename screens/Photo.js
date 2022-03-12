@@ -21,6 +21,14 @@ const Photo = (props) => {
       }
   })
   
+  Photo.navigationOptions = {
+
+    headerTitle: 'TestHeaderTitle'
+
+  }
+  /**
+   * Définir la propriété navigationOptions à un composant
+   */
   
 
   
@@ -36,6 +44,7 @@ const Photo = (props) => {
     </View>
   )
 }
+
 
 export default Photo
 

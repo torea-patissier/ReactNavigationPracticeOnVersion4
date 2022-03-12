@@ -24,11 +24,6 @@ const screens =  {
     Photo:
     {
     screen : Photo,
-        navigationOptions : {
-            title: 'Ecran photo',
-            // headerStyle: { backgroundColor: Color.grey }
-        }
-
     },
 
     Portfolio:
@@ -50,7 +45,7 @@ const HeaderParDefaut = {
 
         headerTitleStyle: {
             fontWeight: 'bold',
-            fontSize: 25
+            fontSize:25
         },
     }
 }

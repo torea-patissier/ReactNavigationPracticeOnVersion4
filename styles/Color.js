@@ -1,3 +1,4 @@
 export default {
-    white: '#ffff'
+    white: '#ffff',
+    violet: 'palevioletred'
 }

@@ -1,6 +1,7 @@
 import { View, Image, FlatList, Text, Pressable } from 'react-native'
 import React, {useEffect} from 'react'
 import { globalStyle } from '../styles/AppStyles';
+import Color from '../styles/Color';
 //Global style est le fichier CSS passé depuis AppStyles
 
 const Home = ({navigation}) => {
@@ -9,7 +10,6 @@ const Home = ({navigation}) => {
      * Ce props est récupéré de StackNav dans HomeStack
      */
 
-    // console.log(props); 
 
     const DATA = [
       {
@@ -47,13 +47,22 @@ const Home = ({navigation}) => {
   ];
 
   const renderProfile = ({item}) => {
+
     /**
      * Après avoir log data, on retrouve un objet qui contient des objets dont item
      * item me permet d'accéder aux différentes propriétés des items du tableau DATA
      */
     return(
       <Pressable
-      style={globalStyle.container}
+      style={({pressed}) => [ {backgroundColor : pressed ? Color.violet : Color.white}, globalStyle.container ]}
+      /**
+       * pressed est récupéré de item via le destructuring 
+       * Si le bouton est pressed (voirDoc sur Pressable props pressed)
+       * Dans un tableau j'ai un ternaire et le globalestyle
+       * le background color change selon le ternaire
+       * j'ai toujours le globalstyle 
+       */
+
       onPress={()=> navigation.navigate('Portfolio',item)}
       /**
        * J'envoie les informations de item en paramètre à la page Portfolio

@@ -24,6 +24,7 @@ const Portfolio = ({navigation}) => {
   return (
     <View style={styles.container}>
       <Text style={styles.textScreen}>{navigation.getParam('name')}</Text>
+      <Text style={styles.textScreen}>{navigation.getParam('totalImg')}</Text>
       {/* 
       navigation est un objet qui contient la methode js getParam
       on récupère le param name du tableau DATA dans Home.js

@@ -1,6 +1,6 @@
 export default {
     white: '#ffff',
     violet: 'palevioletred',
-    salmon: 'salmon',
+    salmon: 'lightsalmon',
     grey: 'lightgrey'
 }

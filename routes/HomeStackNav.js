@@ -12,7 +12,7 @@ const screens =  {
     screen : Home,
         navigationOptions : {
             title: 'Accueil',
-            headerStyle: { backgroundColor: Color.salmon }
+            // headerStyle: { backgroundColor: Color.salmon }
         }
         /**
          * NavigationOptions permet d'ajouter des options au header et de le styliser
@@ -26,7 +26,7 @@ const screens =  {
     screen : Photo,
         navigationOptions : {
             title: 'Ecran photo',
-            headerStyle: { backgroundColor: Color.grey }
+            // headerStyle: { backgroundColor: Color.grey }
         }
 
     },
@@ -35,10 +35,33 @@ const screens =  {
     {
     screen : Portfolio
     },
-
-
 }
 
-const StackNav = createStackNavigator(screens)
+const HeaderParDefaut = {
+
+    //Propriété react navigation
+    defaultNavigationOptions: {
+
+        headerStyle: {
+            backgroundColor: Color.salmon,
+          },
+
+        headerTintColor: Color.white,
+
+        headerTitleStyle: {
+            fontWeight: 'bold',
+            fontSize: 25
+        },
+    }
+}
+/**
+ * Permet de définir un entête par défaut qui avec un style 
+ * qui sera répété dans chaque page, sans avoir besoin
+ * de copier/coller le style 
+ * https://reactnavigation.org/docs/4.x/headers
+ */
+
+
+const StackNav = createStackNavigator(screens, HeaderParDefaut)
 
 export default createAppContainer(StackNav)

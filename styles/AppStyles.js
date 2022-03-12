@@ -2,6 +2,7 @@ import { StyleSheet } from 'react-native'
 import Color from './Color'
 
 export const globalStyle = StyleSheet.create({
+    
     container:{
          flex:1,
          justifyContent:'center',

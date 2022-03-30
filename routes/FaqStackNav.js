@@ -1,16 +1,14 @@
 import { createStackNavigator } from 'react-navigation-stack';
-import Home from '../screens/Home';
-import Photo from '../screens/Photo';
-import Portfolio from '../screens/Portfolio';
+import Faq from '../screens/Faq';
 import Color from '../styles/Color';
 
 const screens =  {
 
-    Home:
+    Faq:
     {
-    screen : Home,
+    screen : Faq,
         navigationOptions : {
-            title: 'Accueil',
+            title: 'F.A.Q',
         }
         /**
          * NavigationOptions permet d'ajouter des options au header et de le styliser
@@ -19,16 +17,6 @@ const screens =  {
          * 
          */ 
         
-    },
-
-    Photo:
-    {
-    screen : Photo,
-    },
-
-    Portfolio:
-    {
-    screen : Portfolio
     },
 }
 
@@ -58,6 +46,6 @@ const HeaderParDefaut = {
  * 
  */
 
-const StackNav = createStackNavigator(screens, HeaderParDefaut)
+const FaqStackNav = createStackNavigator(screens, HeaderParDefaut)
 
-export default StackNav;
+export default FaqStackNav;

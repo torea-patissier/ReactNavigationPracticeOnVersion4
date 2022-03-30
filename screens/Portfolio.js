@@ -41,7 +41,7 @@ const Portfolio = ({navigation}) => {
 
 Portfolio.navigationOptions = (navData) => {
 
-  // console.log(navData)
+  // console.log(navData);
   const name = navData.navigation.getParam('name');
   const favColor = navData.navigation.getParam('favColor');
 

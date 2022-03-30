@@ -8,11 +8,21 @@ const MaterialIconHeader = (props) => (
 
     <HeaderButton
     IconComponent={MaterialIcons}
-    iconSize={23}
+    iconSize={30}
     {...props}
-    // color={Color.white}
     />
 
 );
-
+/**
+ * https://github.com/vonovak/react-navigation-header-buttons
+ * 
+ * Documentation
+ * 
+ *  https://icons.expo.fyi/
+ * 
+ * Les différents icones 
+ * 
+ * "react-navigation-header-buttons": "^6.3.1", == à installer via terminal
+ * 
+ */
 export default MaterialIconHeader;

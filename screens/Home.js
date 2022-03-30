@@ -1,7 +1,10 @@
 import { View, Image, FlatList, Text, Pressable } from 'react-native'
-import React, {useEffect} from 'react'
+import React from 'react'
 import { globalStyle } from '../styles/AppStyles';
 import Color from '../styles/Color';
+import { HeaderButtons, Item } from 'react-navigation-header-buttons';
+import  MaterialIconHeader  from '../components/MaterialMenuIcon';
+
 //Global style est le fichier CSS passé depuis AppStyles
 
 const Home = ({navigation}) => {
@@ -56,7 +59,8 @@ const Home = ({navigation}) => {
      * Après avoir log data, on retrouve un objet qui contient des objets dont item
      * item me permet d'accéder aux différentes propriétés des items du tableau DATA
      */
-    return(
+    return (
+      
       <Pressable
       style={({pressed}) => [ {backgroundColor : pressed ? Color.violet : Color.white}, globalStyle.container ]}
       /**
@@ -72,6 +76,7 @@ const Home = ({navigation}) => {
        * J'envoie les informations de item en paramètre à la page Portfolio
        */
       >
+        
         <Text style={globalStyle.titleText}>{item.name} | {item.country}</Text>
         <Image
         source = {{ uri: item.img }}
@@ -94,6 +99,29 @@ const Home = ({navigation}) => {
     </View>
     
   )
+
+}
+Home.navigationOptions = ({navigation}) => {
+  console.log(navigation);
+  /**
+   * Voir {navigation} pour voir d'ou vient l'objet navigation et les méthodes 
+   */
+  return {
+
+    headerLeft: () => (
+      <HeaderButtons
+      HeaderButtonComponent = { MaterialIconHeader }
+      >
+        <Item
+        title = 'menu' // Affichera menu si l'icone menu ci-dessous n'est pas chargé
+        iconName = "menu"
+        onPress={() => navigation.toggleDrawer()}
+        /> 
+           
+      </HeaderButtons>
+    ), 
+
+    }
 }
 
 export default Home

@@ -1,9 +1,11 @@
+import React from 'react';
 import { StyleSheet } from 'react-native';
-import StackNav from './routes/HomeStackNav';
+import TheMainNavigator from './routes/DrawerNav';
+
 export default function App() {
   
   return (
-    <StackNav
+    <TheMainNavigator
     color = {styles.textScreen}
     />
   );

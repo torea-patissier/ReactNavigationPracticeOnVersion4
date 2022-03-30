@@ -1,6 +1,7 @@
-import { StyleSheet, Text, View, Button } from 'react-native'
-import React, {useEffect} from 'react'
-import { HeaderTitle } from 'react-navigation-stack'
+import React from 'react';
+import { StyleSheet, Text, View, Button } from 'react-native';
+import { HeaderButtons, Item } from 'react-navigation-header-buttons';
+import  MaterialIconHeader  from '../components/MaterialMenuIcon';
 
 const Portfolio = ({navigation}) => {
 
@@ -43,19 +44,35 @@ Portfolio.navigationOptions = (navData) => {
   // console.log(navData)
   const name = navData.navigation.getParam('name');
   const favColor = navData.navigation.getParam('favColor');
-  
 
   return {
     // HeaderTitle: 'MonProfil',
     headerTitle: `Profil de ${name}`,
-    headerStyle:{ backgroundColor : `${favColor}`}
+    headerStyle:{ backgroundColor : `${favColor}`},
+    headerRight: () => (
+      <HeaderButtons
+      HeaderButtonComponent = { MaterialIconHeader }
+      >
 
+        <Item
+        title = 'menu' // Affichera menu si l'icone menu ci-dessous n'est pas chargé
+        iconName = "menu"
+        onPress={() => alert('Portfolio de ' + name)}
+        /> 
+           
+      </HeaderButtons>
+    ), 
+ 
+    /**
+     * headerRight permet d'ajouter un bouton en haut à droite du header
+     */
   }
 
 }
 
 export default Portfolio
 
+//CSS
 const styles = StyleSheet.create({
     container:{
         justifyContent:'center',

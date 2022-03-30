@@ -50,14 +50,6 @@ const HeaderParDefaut = {
             fontWeight: 'bold',
             fontSize:25
         },
-
-        headerRight: () => (
-            <Button
-            onPress={()=>alert('Dans HeaderParDefaut')}
-            title="info"
-            color='red'
-            /> 
-        ),
     }
 }
 /**
@@ -66,7 +58,6 @@ const HeaderParDefaut = {
  * de copier/coller le style 
  * https://reactnavigation.org/docs/4.x/headers
  * 
- * headerRight permet d'ajouter un bouton en haut à droite du header
  * 
  */
 

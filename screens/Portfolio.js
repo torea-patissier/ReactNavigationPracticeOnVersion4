@@ -1,18 +1,19 @@
 import { StyleSheet, Text, View, Button } from 'react-native'
 import React, {useEffect} from 'react'
+import { HeaderTitle } from 'react-navigation-stack'
 
 const Portfolio = ({navigation}) => {
 
-    useEffect(() => {
+    // useEffect(() => {
 
-      console.log('Portfolio est monté');
+    //   console.log('Portfolio est monté');
       
-        return () => {
+    //     return () => {
 
-          console.log('Portfolio est démonté');
+    //       console.log('Portfolio est démonté');
           
-        }
-    })
+    //     }
+    // })
     
 
     const GoToPhoto = () => {
@@ -32,10 +33,25 @@ const Portfolio = ({navigation}) => {
       <Button
       title='Navigate vers photos'
       onPress={GoToPhoto}
-
       />
     </View>
   )
+}
+
+Portfolio.navigationOptions = (navData) => {
+
+  // console.log(navData)
+  const name = navData.navigation.getParam('name');
+  const favColor = navData.navigation.getParam('favColor');
+  
+
+  return {
+    // HeaderTitle: 'MonProfil',
+    headerTitle: `Profil de ${name}`,
+    headerStyle:{ backgroundColor : `${favColor}`}
+
+  }
+
 }
 
 export default Portfolio

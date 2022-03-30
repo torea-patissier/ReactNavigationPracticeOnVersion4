@@ -1,9 +1,11 @@
+import React from 'react';
+import { Button } from 'react-native';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import Home from '../screens/Home';
 import Photo from '../screens/Photo';
 import Portfolio from '../screens/Portfolio';
-import Color from '../styles/Color'
+import Color from '../styles/Color';
 
 const screens =  {
 
@@ -12,13 +14,14 @@ const screens =  {
     screen : Home,
         navigationOptions : {
             title: 'Accueil',
-            // headerStyle: { backgroundColor: Color.salmon }
         }
         /**
          * NavigationOptions permet d'ajouter des options au header et de le styliser
          * Rajouter un titre, ajouter une couleur etc
          * https://reactnavigation.org/docs/4.x/headers
-         */
+         * 
+         */ 
+        
     },
 
     Photo:
@@ -47,6 +50,14 @@ const HeaderParDefaut = {
             fontWeight: 'bold',
             fontSize:25
         },
+
+        headerRight: () => (
+            <Button
+            onPress={()=>alert('Dans HeaderParDefaut')}
+            title="info"
+            color='red'
+            /> 
+        ),
     }
 }
 /**
@@ -54,6 +65,9 @@ const HeaderParDefaut = {
  * qui sera répété dans chaque page, sans avoir besoin
  * de copier/coller le style 
  * https://reactnavigation.org/docs/4.x/headers
+ * 
+ * headerRight permet d'ajouter un bouton en haut à droite du header
+ * 
  */
 
 

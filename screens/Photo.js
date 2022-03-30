@@ -10,16 +10,16 @@ const Photo = (props) => {
     props.navigation.popToTop();
   }
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    console.log('Photo est monté');
+  //   console.log('Photo est monté');
 
-      return () => {
+  //     return () => {
 
-        console.log('Photo est démonté');
+  //       console.log('Photo est démonté');
         
-      }
-  })
+  //     }
+  // })
   
   Photo.navigationOptions = {
 

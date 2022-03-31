@@ -1,13 +1,12 @@
 import { createDrawerNavigator } from 'react-navigation-drawer';
 import { createAppContainer } from 'react-navigation';
 import FaqStackNav from './FaqStackNav';
-import StackNav from './HomeStackNav';
-
+import BottomtabNav from './BottomTabNav';
 
 const RouteConfigs = {
 
     Home : {
-        screen : StackNav
+        screen : BottomtabNav
     },
     FAQ : {
         screen : FaqStackNav

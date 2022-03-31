@@ -7,10 +7,10 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "react-devtools": "react-devtools"
   },
   "dependencies": {
-    "@expo/vec r-icons": "^12.0.5",
     "@react-native-community/masked-view": "^0.1.11",
     "expo": "~44.0.0",
     "expo-app-loading": "~1.3.0",
@@ -26,7 +26,8 @@
     "react-navigation": "^4.4.4",
     "react-navigation-drawer": "^2.7.2",
     "react-navigation-header-buttons": "^6.3.1",
-    "react-navigation-stack": "^2.10.4"
+    "react-navigation-stack": "^2.10.4",
+    "react-navigation-tabs": "^2.11.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
